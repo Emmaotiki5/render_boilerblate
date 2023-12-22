@@ -1,0 +1,47 @@
+<div>
+  <div class="d-flex justify-content-between w-100">
+    <p class="foat-start fs-1">Selected Work</p>
+    <div>
+      <%= button_tag 'All Work', class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+
+  <div class="row text-start w-100 justify-content-between">
+    <div class="col-md-12 col-lg-5 ">
+      <%= link_to root_path, target:"_blank" do %>
+        <%= image_tag 'PackageMockup', class:"w-100" %>
+      <%end%>
+      <br>
+      <br>
+      <p class="float-start">Invision Studio</p>
+      <%= button_tag "Marketing", class: "btn btn-outline-secondary float-end", type: "submit" %>
+    </div>
+    <div class="col-md-12 col-lg-5    ">
+      <%= link_to root_path, target:"_blank" do %>
+        <%= image_tag 'DownloadFree', class:"w-100" %>
+      <%end%>
+      <br>
+      <br>
+      <p class="float-start">Invision Studio</p>
+      <%= button_tag "Marketing", class: "btn btn-outline-secondary float-end", type: "submit" %>
+    </div>
+    <div class="col-md-12 col-lg-5     ">
+      <%= link_to root_path, target:"_blank" do %>
+        <%= image_tag 'CurvedMockup', class:"w-100" %>
+      <%end%>
+      <br>
+      <p class="float-start">Invision Studio</p>
+      <%= button_tag "Marketing", class: "btn btn-outline-secondary float-end", type: "submit" %>
+    </div>
+    <div class="col-md-12 col-lg-5 my-md-5 my-sm-5">
+      <%= link_to root_path, target:"_blank" do %>
+        <%= image_tag 'PackageSticker', class:"w-100" %>
+      <%end%>
+      <br>
+      <p class="float-start">Invision Studio</p>
+      <%= button_tag "Marketing", class: "btn btn-outline-secondary float-end", type: "submit" %>
+      <br>
+    </div>
+  </div>
+
+  <br>
