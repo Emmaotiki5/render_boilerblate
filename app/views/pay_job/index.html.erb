@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
 
+  </head>
+  <body>
+    <div class="w-75 container d-inline-grid" >
+      <h1  class="col-6 w-100 display-1 fw-medium ">Building Brands, One Success Story at a Time.</h1>
+      <p class="display-6">Create a Brand That Resonates: We Can Help You Define and Communicate Your Unique Message.</p>
+    </div>
+    <br>
+    <div ></div>
+    <a href="#home" class="btn btn-primary btn-lg mx">Our Services</a>
+    <br>
+    <br>
+    <br>
+    <%= render partial: 'pages/carousel' %>
+    <hr>
+    <br>
+    <%= render partial: 'pages/rowbuilder' %>
+    <hr>
+    <br>
+    <%= render partial: 'pages/thirdRowBuilder' %>
+    <hr>
+    <br>
+    <%= render partial: 'pages/secondRowBuilder' %>
+    <%= render partial: 'pages/fourthRowBuilder' %>
+    <hr>
+    <br>
+    <%= render partial: 'pages/middlecontainer' %>
+    <hr>
+    <br>
+    <%= render partial: 'pages/fifthRowBuilder' %>
+    <hr>
+    <br>
+
+    <%= render partial: 'pages/feedback', id:"home" %>
+    <hr>
+    <br>
+
+    <hr>
+
+  </body>
+</html>
