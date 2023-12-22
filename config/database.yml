@@ -22,8 +22,6 @@ default: &default
 development:
   <<: *default
   database: deploy_render_development
-  password: crabbyworllD.1
-  username: postgres
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -58,8 +56,6 @@ development:
 test:
   <<: *default
   database: deploy_render_test
-  password: crabbyworllD.1
-  username: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,4 +81,4 @@ production:
   <<: *default
   database: deploy_render_production
   username: deploy_render
-  password: <%= ENV["DEPLOY_RENDER_DATABASE_PASSWORD"] %>
+  password: <%= ENV["deploy_render_DATABASE_PASSWORD"] %>
