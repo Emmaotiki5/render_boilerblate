@@ -1,6 +1,6 @@
 <div class="row text-start w-100 justify-content-start h-100 ">
 
-  <div class="col-lg-3  col-md-3 m-md-3 m-sm-3 bg-secondary-subtle float-start mw-100  ">
+  <div class="col-lg-3  col-md-3 m-md-3 m-sm-3 bg-secondary-subtle float-start mw-100 id="experts"  ">
     <br>
     <p class="text-uppercase fw-medium fs-6">Join the Team</p>
     <p class="display-6 fw-medium mw-100">Want to shape the future of branding?</p>
@@ -11,37 +11,20 @@
     <br>
     <br>
   </div>
-  <div class="col-lg-3 m-md-3 m-sm-3 bg-secondary-subtle float-end mh-100 mw-100  ">
-    <br>
-    <%= image_tag 'Catra.png', class:"mw-100 w-100" , style:"height:20em" %>
-    <br>
-    <br>
-    <p class="float-start">Annete</p>
-    <%= button_tag 'Branding', class:"btn btn-outline-dark float-end" %>
+  <% @experts.each do |expert| %>
+    <div class="col-lg-3 m-md-3 m-sm-3 bg-secondary-subtle float-end mh-100 mw-100">
+      <%= image_tag(expert.image, class:"w-75", style:"height:20em")%>
+      <div class="d-flex mx-auto w-100">
+        <p class="text-start"><%= expert.name  %></p>
+        <%= button_tag expert.department, class:"btn btn-outline-dark ms-5 float-end" %>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-lg-3 m-md-3 m-sm-3 bg-secondary-subtle float-end mh-100 mw-100 d-flex align-items-center justify-content-center">
+    <%= link_to "your_destination_url_here" do %>
+      <%= image_tag "new.png", class: "w-100", style: "height: 20em;" %>
+    <% end %>
+
   </div>
-  <div class="col-lg-3 m-md-3 m-sm-3 bg-secondary-subtle  float-end mh-100 mw-100  ">
-    <br>
-    <%= image_tag 'Catra.png', class:"mw-100 w-100" , style:"height:20em" %>
-    <br>
-    <br>
-    <p class="float-start">Annete</p>
-    <%= button_tag 'Branding', class:"btn btn-outline-dark float-end" %>
-  </div>
-  <div class="col-lg-3 m-md-3 m-sm-3 bg-secondary-subtle  float-end mh-100 mw-100  ">
-    <br>
-    <%= image_tag 'Catra.png', class:"mw-100 w-100" , style:"height:20em" %>
-    <br>
-    <br>
-    <p class="float-start">Annete</p>
-    <%= button_tag 'Branding', class:"btn btn-outline-dark float-end" %>
-  </div>
-  <div class="col-lg-3 m-md-3 m-sm-3 bg-secondary-subtle  float-end mh-100 mw-100  ">
-    <br>
-    <%= image_tag 'Catra.png', class:"mw-100 w-md-100 w-100" , style:"height:20em" %>
-    <br>
-    <br>
-    <p class="float-start sm">Annete</p>
-    <%= button_tag 'Branding', class:"btn btn-outline-dark float-end" %>
-  </div>
-  <br>
+
 </div>

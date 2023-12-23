@@ -1,8 +1,8 @@
 Arguments: 
-  /home/emmanuel_gbodo-otiki/.nvm/versions/node/v21.5.0/bin/node /usr/share/yarn/bin/yarn.js
+  /home/emmanuel_gbodo-otiki/.nvm/versions/node/v21.5.0/bin/node /usr/share/yarn/bin/yarn.js add esbuild
 
 PATH: 
-  /home/emmanuel_gbodo-otiki/.nvm/versions/node/v21.5.0/bin:/home/emmanuel_gbodo-otiki/.rbenv/shims:/home/emmanuel_gbodo-otiki/.rbenv/bin:/home/emmanuel_gbodo-otiki/.rbenv/shims:/home/emmanuel_gbodo-otiki/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.8.7-hotspot/bin:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Roaming/npm:/mnt/c/Program Files/PostgreSQL/15/bin:/mnt/c/adb:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/PowerShell/7-preview/preview:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Users/EmmanuelGbodoOtiki/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Roaming/npm:/mnt/c/Program Files/PostgreSQL/15/bin:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Roaming/Python/Python311/Scripts:/mnt/c/flutter/bin:/mnt/c/Program Files (x86)/Nox/bin:/mnt/c/asdk/platform-tools:/mnt/c/Ruby32-x64/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/snap/bin
+  /home/emmanuel_gbodo-otiki/.nvm/versions/node/v21.5.0/bin:/home/emmanuel_gbodo-otiki/.rbenv/shims:/home/emmanuel_gbodo-otiki/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.8.7-hotspot/bin:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Roaming/npm:/mnt/c/Program Files/PostgreSQL/15/bin:/mnt/c/adb:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/PowerShell/7-preview/preview:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Users/EmmanuelGbodoOtiki/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Roaming/npm:/mnt/c/Program Files/PostgreSQL/15/bin:/mnt/c/Users/Emmanuel Gbodo-Otiki/AppData/Roaming/Python/Python311/Scripts:/mnt/c/flutter/bin:/mnt/c/Program Files (x86)/Nox/bin:/mnt/c/asdk/platform-tools:/mnt/c/Ruby32-x64/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/snap/bin
 
 Yarn version: 
   1.22.19
@@ -14,7 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: ETXTBSY: text file is busy, copyfile '/home/emmanuel_gbodo-otiki/.cache/yarn/v6/npm-@esbuild-linux-x64-0.19.10-898c72eeb74d9f2fb43acf316125b475548b75ce-integrity/node_modules/@esbuild/linux-x64/bin/esbuild' -> '/mnt/c/users/EmmanuelGbodoOtiki/Desktop/deploy_render/node_modules/@esbuild/linux-x64/bin/esbuild'
+  AggregateError [ETIMEDOUT]: 
+      at internalConnectMultiple (node:net:1114:18)
+      at internalConnectMultiple (node:net:1177:5)
+      at Timeout.internalConnectMultipleTimeout (node:net:1687:3)
+      at listOnTimeout (node:internal/timers:575:11)
+      at process.processTimers (node:internal/timers:514:7)
 
 npm manifest: 
   {

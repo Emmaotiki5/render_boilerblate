@@ -3,5 +3,6 @@ class PayJobController < ApplicationController
   end
 
   def index
+    @experts=Expert.all
   end
 end
