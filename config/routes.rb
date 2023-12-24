@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :friends
-  devise_for :users
+  # routes.rb
+devise_for :users #, controllers: {
+#  sessions: 'users/sessions/sessions',
+#}
+
   resources :experts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

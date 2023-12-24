@@ -1,27 +1,36 @@
-<div class=" card py-5 container-md">
+<div class="card py-5 container-md">
   <h2 class="card-header">Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
     <form class="form bg-secondary-subtle">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+
+      <% if resource.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(resource.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% resource.errors.full_messages.each do |message| %>
+              <li><%= render 'pages/alerts', locals: {notice: notice} %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
       <br>
       <br>
-      <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
       <br>
       <br>
 
       <% if devise_mapping.rememberable? %>
-        <%= f.check_box :remember_me, class:"form-check-input" %>
-        <%= f.label :remember_me, class:"form-check-label" %>
+        <%= f.check_box :remember_me, class: "form-check-input" %>
+        <%= f.label :remember_me, class: "form-check-label" %>
       <% end %>
 
-      <%= f.submit "Log in", class:"btn btn-secondary btn-sm"%>
+      <%= f.submit "Log in", class: "btn btn-secondary btn-sm" %>
       <br>
       <br>
       <%= render "devise/shared/links" %>
-
     </form>
   <% end %>
-
 </div>
