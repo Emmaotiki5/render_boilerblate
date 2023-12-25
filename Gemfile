@@ -74,3 +74,7 @@ gem "devise", "~> 4.9"
 gem "image_processing", "~> 1.12"
 
 gem "shrine", "~> 3.5"
+
+gem "htmlbeautifier", "~> 1.4"
+
+gem "ruby-lsp", "~> 0.13.2"
