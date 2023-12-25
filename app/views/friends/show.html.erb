@@ -1,12 +1,21 @@
 <div class="card bg-secondary bg-opacity-25">
   <div class="card-body">
     <h1 class="card-title"><%= @friend.first_name %> <%= @friend.last_name %> </h1>
-    <p class="card-text">Email: <%= @friend.email %></p>
-    <p class="card-text">Phone Number: <%= @friend.phone_no %></p>
-    <p class="card-text">Twitter: <%= @friend.twitter %></p>
-    <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-sm btn-primary" %>
+    <div class="row">
+      <div class="col-auto">
+        <div class="col-auto mx-auto">
+          <%= image_tag(@friend.image, class:"w-25") %>
+        </div>
+        <ul class="list-unstyled">
+          <li>Email: <%= @friend.email %></li>
+          <li>Phone Number: <%= @friend.phone_no %></li>
+          <li>Twitter: <%= @friend.twitter %></li>
+        </ul>
+      </div>
 
-    <%= link_to "Back to friends", friends_path, class:"btn btn-sm btn-primary" %>
-    <%= button_to "Destroy this friend", @friend, method: :delete,  data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class:"btn btn-sm btn-outline-danger  mt-3"  %>
+    </div>
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-sm btn-primary me-2" %>
+    <%= link_to "Back to friends", friends_path, class: "btn btn-sm btn-primary me-2" %>
+    <%= button_to "Destroy this friend", @friend, method: :delete, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger mt-3" %>
   </div>
 </div>

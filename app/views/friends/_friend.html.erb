@@ -1,23 +1,23 @@
-<table class="table table-light table-striped table-hover table-bordered">
-  <thead>
-    <tr class="table-dark ">
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Phone No</th>
-      <th>Twitter</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= friend.first_name %></td>
-      <td><%= friend.last_name %></td>
-      <td><%= friend.phone_no %></td>
-      <td><%= friend.twitter %></td>
-      <td><%= friend.email %></td>
-      <td><%= link_to 'Edit', edit_friend_path(friend), class:"btn btn-secondary" %></td>
-      <td><%= button_to "Destroy this friend", friend, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger" %></td>
-    </tr>
-  </tbody>
-</table>
+<% if friend.user_id == current_user.id  %>
+    <div class="p-5 mb-4 bg-secondary-subtle rounded-3 w-75">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">
+          <div>
+            <%= link_to friend.first_name + ' ' + friend.last_name, friend, class:"nav-link" %>
+          </div>
+        </h1>
+        <div class="row">
+          <div class="col-md-8 fs-4">
+            <p>Phone Number: <%= friend.phone_no %></p>
+            <p>Twitter Handle: <%= friend.twitter %></p> 
+            <p>Email: <%= friend.email %></p>
+            <%= button_to "Destroy this friend", friend, method: :delete,  data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class:"btn btn-lg btn-outline-danger "  %>
+          </div>
+          <div class="col">
+            <%= image_tag(friend.image, class:"w-75") %>   
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <br>
