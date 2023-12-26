@@ -1,6 +1,6 @@
 <div id="<%= dom_id expert %>" class="w-100 card">
   <p class="w-25 mx-auto">
-    <%= link_to expert do %>
+    <%= link_to edit_expert_path(expert) do %>
       <%= image_tag(expert.image, class:"w-75")%>
     <% end %>
   </p>

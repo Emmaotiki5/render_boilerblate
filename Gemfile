@@ -78,3 +78,9 @@ gem "shrine", "~> 3.5"
 gem "htmlbeautifier", "~> 1.4"
 
 gem "ruby-lsp", "~> 0.13.2"
+
+gem "erb_lint", "~> 0.5.0"
+
+gem "solargraph", "~> 0.50.0"
+
+gem "rubocop", "~> 1.59"

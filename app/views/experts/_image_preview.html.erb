@@ -1,5 +1,8 @@
 <div data-controller="previews">
-  <%= form.label :image, class:"form-label"%>
+  <%= form.label :image, class:"form-label" %>
   <%= form.file_field :image, class:"form-control w-25", id: 'image-input', onchange:"readURL(this);" %>
-  <img id="img_prev" src="#" alt="" />
+  <img id="img_prev" src="#" alt="">
+  <% unless form.object.image.attached? %>
+    <%= image_tag @expert.image, style: "height: 10em" %>
+  <% end %>
 </div>
