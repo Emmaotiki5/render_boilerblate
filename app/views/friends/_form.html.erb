@@ -10,22 +10,19 @@
       </ul>
     </div>
   <% end %>
-    <div>
-    <%= form.label :image, class:"form-label" %>
-    <%= form.file_field :image, class:"form-control" %>
-    </div>
-    <br>
-    <%= form.text_field :first_name, class:"form-control",placeholder:"First Name" %>
-    <br>
-    <%= form.text_field :last_name, class:"form-control",placeholder:"Last Name" %>
-    <br>
-    <%= form.text_field :email, class:"form-control",placeholder:"Email" %>
-    <br>
-    <%= form.text_field :phone_no, class:"form-control",placeholder:"Phone Number" %>
-    <br>
-    <%= form.text_field :twitter, class:"form-control", placeholder:"Twitter" %>
-    <br>
-    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value:current_user.id, type: :hidden %>
-    <br>
-    <%= form.submit class: "btn btn-secondary"%>
+  <%= render "image_preview", form: form, friend: friend %>
+  <br>
+  <%= form.text_field :first_name, class:"form-control",placeholder:"First Name" %>
+  <br>
+  <%= form.text_field :last_name, class:"form-control",placeholder:"Last Name" %>
+  <br>
+  <%= form.text_field :email, class:"form-control",placeholder:"Email" %>
+  <br>
+  <%= form.text_field :phone_no, class:"form-control",placeholder:"Phone Number" %>
+  <br>
+  <%= form.text_field :twitter, class:"form-control", placeholder:"Twitter" %>
+  <br>
+  <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  <br>
+  <%= form.submit class: "btn btn-secondary"%>
 <% end %>

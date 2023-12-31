@@ -5,11 +5,12 @@
     data: { imgpreview_target: 'input', action: "change->imgpreview#preview" },
     class: "form-control w-25" %>
   <br>
-  <% if expert.image.attached? %>
-    <%= image_tag expert.image, class: "w-auto mx-auto",style: "height:15em;", data: { imgpreview_target: 'preview' } %>
+  <% if friend.image.attached? %>
+    <%= image_tag friend.image, class: "w-auto mx-auto",style: "height:15em;", data: { imgpreview_target: 'preview' } %>
   <% else %>
     <div class="w-50">
       <%= image_tag '', data: { imgpreview_target: "preview"}, class: "w-25 mx-auto" %>
     </div>
+
   <% end %>
 </div>

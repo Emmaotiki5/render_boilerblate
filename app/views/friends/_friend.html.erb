@@ -1,23 +1,25 @@
-<% if friend.user_id == current_user.id  %>
-    <div class="p-5 mb-4 bg-secondary-subtle rounded-3 w-75">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">
-          <div>
-            <%= link_to friend.first_name + ' ' + friend.last_name, friend, class:"nav-link" %>
-          </div>
-        </h1>
-        <div class="row">
-          <div class="col-md-8 fs-4">
-            <p>Phone Number: <%= friend.phone_no %></p>
-            <p>Twitter Handle: <%= friend.twitter %></p> 
-            <p>Email: <%= friend.email %></p>
-            <%= button_to "Destroy this friend", friend, method: :delete,  data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class:"btn btn-lg btn-outline-danger "  %>
-          </div>
-          <div class="col">
-            <%= image_tag(friend.image, class:"w-75") %>   
-          </div>
+<% if friend.user_id == current_user.id %>
+
+  <div class="card bg-light">
+    <div class="card-body">
+      <h1 class="card-title"><%= friend.first_name %> <%= friend.last_name %></h1>
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <%= link_to friend do %>
+            <%= image_tag(friend.image, class: "img-fluid rounded-circle", style: "max-width: 100px; height: auto;") if friend.image.attached? %>
+          <% end %>
+
+        </div>
+        <div class="col-md-8">
+          <ul class="list-unstyled">
+            <li><strong>Email:</strong> <%= friend.email %></li>
+            <li><strong>Phone Number:</strong> <%= friend.phone_no %></li>
+            <li><strong>Twitter:</strong> <%= friend.twitter %></li>
+          </ul>
+
+          <%= button_to "Destroy this friend", friend, method: :delete, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, class: "btn btn-sm btn-outline-danger mt-3" %>
         </div>
       </div>
     </div>
-  <% end %>
-  <br>
+  </div>
+<% end %>
