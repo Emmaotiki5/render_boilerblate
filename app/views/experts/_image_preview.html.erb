@@ -6,10 +6,7 @@
     class: "form-control w-25" %>
   <br>
   <% if expert.image.attached? %>
-    <div class="h-50">
-      <%= image_tag expert.image, class:"h-50", data: { imgpreview_target: 'preview' } %>
-    </div>
-
+    <%= image_tag expert.image, class: "w-auto mx-auto",style: "height:15em;", data: { imgpreview_target: 'preview' } %>
   <% else %>
     <%= image_tag '', data: { imgpreview_target: "preview"} %>
   <% end %>
