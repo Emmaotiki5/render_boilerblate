@@ -1,4 +1,4 @@
-<%= form_with(model: expert, class: "form mx-auto") do |form|  %>
+<%= form_with(model: expert, class: "form mx-auto") do |form| %>
   <% if expert.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(expert.errors.count, "error") %> prohibited this expert from being saved:</h2>
@@ -21,7 +21,7 @@
     <%= form.text_field :department, class:"form-control" %>
   </div>
 
-  <%= render 'image_preview', form: form, post: expert %>
+  <%= render "image_preview", form: form, expert: expert %>
 
   <div>
     <%= form.submit  class:"btn btn-secondary mt-5" %>
