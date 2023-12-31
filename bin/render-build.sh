@@ -6,4 +6,4 @@ bundle install
 bundle exec rake assets:precompile --trace
 bundle exec rake assets:clean --trace
 bundle exec rails db:migrate --trace
- 
+rails db:delete_all_records
